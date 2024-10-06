@@ -18,6 +18,7 @@ public class CourseService {
     public CourseEntity createCourse(CourseEntity course) {
         return courseRepo.save(course);
     }
+    
 
     //Read of CRUD
     public List<CourseEntity> getAllCourses() {

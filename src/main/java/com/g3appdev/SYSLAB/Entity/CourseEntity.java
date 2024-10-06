@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import jakarta.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonManagedReference; // Add this import
 
 @Entity
 @Table(name = "courses")
@@ -20,6 +21,7 @@ public class CourseEntity {
 
     @OneToOne
     @JoinColumn(name = "id")
+    @JsonManagedReference // Add this annotation
     private TeacherEntity teacher;
 
     public CourseEntity() {
